@@ -12,7 +12,7 @@ while (1) {
 	for ($i = 0; $i < 1500; $i++) {
 		$baru->react($get);
 		//sleep(1);
-		$rand = rand(0, 10);
+		//$rand = rand(0, 10);
 		sleep($rand); // Supaya Server askdaraz gak down
 		$id = $baru->cari($get);
 		$get = $id;

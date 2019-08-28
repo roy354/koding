@@ -110,7 +110,7 @@ class social {
 			echo 'Error:' . curl_error($ch);
 		} else {
 			if (preg_match("/200/", $result)) {
-				echo "[*] Berhasil React => $postid\n ";
+				echo "[*] Berhasil React => $postid\n";
 				//echo $result;
 			} else {
 				echo "Gagal Nanti AJA Kita fix\n";
@@ -155,13 +155,13 @@ class social {
 		curl_setopt($ch, CURLOPT_COOKIEFILE, dirname(__FILE__)."/cookie/".$this->user);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, "amount=$jumlah&user_id=$id");
 		curl_setopt($ch, CURLOPT_POST, 1);
-		curl_setopt($ch, CURLOPT_ENCODING, 'gzip, deflate');
+	//	curl_setopt($ch, CURLOPT_ENCODING, 'gzip, deflate');
 
 		$headers = array();
 		//$headers[] = 'Sec-Fetch-Mode: cors';
 		//$headers[] = 'Sec-Fetch-Site: same-origin';
 		//$headers[] = 'Dnt: 1';
-		$headers[] = 'Accept-Encoding: gzip, deflate, br';
+	//$headers[] = 'Accept-Encoding: gzip, deflate, br';
 		$headers[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
 		$headers[] = 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36';
 		$headers[] = 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8';
@@ -196,13 +196,13 @@ class social {
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 
-		curl_setopt($ch, CURLOPT_ENCODING, 'gzip, deflate');
+		//curl_setopt($ch, CURLOPT_ENCODING, 'gzip, deflate');
 
 		$headers = array();
 		//$headers[] = 'Sec-Fetch-Mode: cors';
 		//$headers[] = 'Sec-Fetch-Site: same-origin';
 		//$headers[] = 'Dnt: 1';
-		$headers[] = 'Accept-Encoding: gzip, deflate, br';
+//		$headers[] = 'Accept-Encoding: gzip, deflate, br';
 		$headers[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
 		$headers[] = 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36';
 		$headers[] = 'Accept: */*';
@@ -231,12 +231,12 @@ class social {
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, "postText=".$postingan."&videocount=&video_thumb=&musiccount=&answer%5B%5D=&answer%5B%5D=&album_name=&phtoscount=&filename=&postMap=&feeling=&feeling_type=&postPhotos%5B%5D=&postVideo=&postFile=&postMusic=&postPrivacy=0&hash_id=640b1e125b6f9d3653b74e74866bf035baa65553&postRecord=&postSticker=");
 		curl_setopt($ch, CURLOPT_POST, 1);
-		curl_setopt($ch, CURLOPT_ENCODING, 'gzip, deflate');
+		//curl_setopt($ch, CURLOPT_ENCODING, 'gzip, deflate');
 
 		$headers = array();
 		
 		$headers[] = 'Origin: '.$this->link.'';
-		$headers[] = 'Accept-Encoding: gzip, deflate, br';
+		//$headers[] = 'Accept-Encoding: gzip, deflate, br';
 		$headers[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
 		$headers[] = 'User-Agent: Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Mobile Safari/537.36';
 		$headers[] = 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8';
@@ -270,13 +270,13 @@ class social {
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 	curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-	curl_setopt($ch, CURLOPT_ENCODING, 'gzip, deflate');
+	//curl_setopt($ch, CURLOPT_ENCODING, 'gzip, deflate');
 
 	$headers = array();
 	//$headers[] = 'Sec-Fetch-Mode: cors';
 	//$headers[] = 'Sec-Fetch-Site: same-origin';
 	//$headers[] = 'Dnt: 1';
-	$headers[] = 'Accept-Encoding: gzip, deflate, br';
+	//$headers[] = 'Accept-Encoding: gzip, deflate, br';
 	$headers[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
 	$headers[] = 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36';
 	$headers[] = 'Accept: */*';
