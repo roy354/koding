@@ -13,6 +13,7 @@ foreach ($pisah as $kunci) {
 	$user = $pisah_1[0];
 	$pass = $pisah_1[1];
 	popen("start php asli.php $user $pass", "w");
+	//sleep(60);
 
 }
 

@@ -114,7 +114,7 @@ class social {
 				//echo $result;
 			} else {
 				echo "Gagal Nanti AJA Kita fix\n";
-				//echo "$result\n";
+				echo "$result\n";
 				//echo "\n\n";
 				$this->berhenti = 1;
 				$this->react($postid);
@@ -192,6 +192,7 @@ class social {
 
 		$ch = curl_init();
 		$waktu = date("U");
+		curl_setopt($ch, CURLOPT_TIMEOUT, 100);
 		curl_setopt($ch, CURLOPT_URL, 'https://www.askdaraz.com/requests.php?hash='.$this->token.'&f=posts&s=load_more_posts&filter_by_more=all&after_post_id=' . $w . '&user_id=0&page_id=0&group_id=0&event_id=0&posts_count=44&is_api=0&ad_id=0&story_id=0&_='.$waktu.'');
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
@@ -284,7 +285,7 @@ class social {
 	$headers[] = 'X-Requested-With: XMLHttpRequest';
 	curl_setopt($ch, CURLOPT_COOKIEFILE, dirname(__FILE__)."/cookie/".$this->user);
 	curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-
+	curl_setopt($ch, CURLOPT_TIMEOUT, 100);
 	$result = curl_exec($ch);
 	if (curl_errno($ch)) {
 		echo 'Error:' . curl_error($ch);
